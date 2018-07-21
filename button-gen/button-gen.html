@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Button Generator</title>
+        <style>
+            button{
+                width: 50px;
+                height: 50px;
+                background: red;
+                border: 0;
+                margin: 3px;
+            }
+            button:nth-child(2n){
+                background: blue;
+            }
+            button:hover{
+                background: green;
+                color: white;
+            }
+            
+            
+        </style>
+    </head>
+
+    <body>
+        <h1>Button Generator</h1>
+        <a href="../index.html">Back to Main</a>
+        <br><br>
+
+        <script>
+            let num = 1;
+            let id = setInterval(function(){
+
+                let btn = document.createElement('button');
+                btn.innerText = num++;
+                document.body.appendChild(btn);
+                
+                let random = (Math.random()*10);
+
+
+                
+
+
+
+                if(num == 10){
+                    clearInterval(id);
+                }
+
+                // btn.addEventListener('click', function(){
+                //     if(btn.in)
+                    
+
+
+                    
+                // });
+
+            },100);
+            
+            
+        </script>
+
+    </body>
+
+</html>
